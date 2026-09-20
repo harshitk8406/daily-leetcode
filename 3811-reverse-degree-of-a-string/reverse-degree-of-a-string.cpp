@@ -1,12 +1,13 @@
 class Solution {
 public:
     int reverseDegree(string s) {
+        int start = 26;
         unordered_map<char,int> mp;
-        int temp = 26;
         for (char ch='a'; ch<='z'; ch++){
-            mp[ch] = temp;
-            temp--;
+            mp[ch] = start;
+            start--;
         }
+
         int sum = 0;
         for (int i=0; i<s.size(); i++){
             char ch = s[i];
